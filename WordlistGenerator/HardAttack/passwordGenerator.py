@@ -1,0 +1,12 @@
+import random, string
+
+def generator():
+    tamanho = 8
+
+    chars = string.ascii_letters + string.digits + '!@#$%¨&*()-+=?ç'
+
+    rnd = random.SystemRandom() #os.urandom
+    senha = ''.join(rnd.choice(chars) for i in range (tamanho))
+    #print("Senha: {}".format(senha))
+    
+    return senha
